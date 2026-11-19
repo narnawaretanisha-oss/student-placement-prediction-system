@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background: linear-gradient(135deg, #f3f6fa, #e9f0f6);
+
+            color: #293b4f;
+        }
+
+
+        .container {
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .form-box {
+            width: 430px;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            padding: 38px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e2eaf1;
+
+            box-shadow: 0 12px 35px rgba(63, 96, 124, 0.12);
+
+            transition: all 0.35s ease;
+        }
+
+
+        .form-box:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 18px 40px rgba(63, 96, 124, 0.17);
+        }
+
+
+        h1 {
+            text-align: center;
+
+            color: #3f607c;
+
+            margin-bottom: 25px;
+
+            font-size: 30px;
+
+            transition: 0.3s ease;
+        }
+
+
+        h1:hover {
+            color: #55748e;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        label {
+            display: block;
+
+            margin-top: 15px;
+
+            margin-bottom: 7px;
+
+            color: #4d6073;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        input {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #d3dce5;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            background: #fafcfe;
+
+            color: #293b4f;
+
+            transition: all 0.3s ease;
+        }
+
+
+        input:hover {
+            border-color: #9eb2c3;
+
+            background: white;
+        }
+
+
+        input:focus {
+            border-color: #6d8ba4;
+
+            background: white;
+
+            box-shadow: 0 0 0 3px rgba(109, 139, 164, 0.13);
+        }
+
+
+        button {
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #6d8ba4;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            box-shadow: 0 5px 12px rgba(63, 96, 124, 0.15);
+
+            transition: all 0.3s ease;
+        }
+
+
+        button:hover {
+            background: #55748e;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 18px rgba(63, 96, 124, 0.22);
+        }
+
+
+        button:active {
+            transform: translateY(0);
+
+            box-shadow: 0 3px 8px rgba(63, 96, 124, 0.15);
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h1>Student Registration</h1>
+
+
+            <form method="POST" action="{% url 'save_student' %}">
+
+                {% csrf_token %}
+
+
+                <label>
+                    Student ID
+                </label>
+
+                <input
+                    type="text"
+                    name="student_id"
+                    required
+                >
+
+
+                <label>
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    name="student_name"
+                    required
+                >
+
+
+                <label>
+                    Student Password
+                </label>
+
+                <input
+                    type="password"
+                    name="student_password"
+                    required
+                >
+
+
+                <label>
+                    Student Email
+                </label>
+
+                <input
+                    type="email"
+                    name="student_email"
+                    required
+                >
+
+
+                <button type="submit">
+                    Submit
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

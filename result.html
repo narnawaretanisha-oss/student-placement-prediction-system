@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Result</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background: linear-gradient(135deg, #f3f6fa, #e9f0f6);
+
+            color: #293b4f;
+        }
+
+
+        .container {
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .result-box {
+            width: 450px;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            padding: 45px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            border: 1px solid #e2eaf1;
+
+            box-shadow: 0 12px 35px rgba(63, 96, 124, 0.12);
+
+            transition: all 0.35s ease;
+        }
+
+
+        .result-box:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 18px 40px rgba(63, 96, 124, 0.17);
+        }
+
+
+        h1 {
+            color: #3f607c;
+
+            margin-bottom: 10px;
+
+            font-size: 30px;
+
+            transition: 0.3s ease;
+        }
+
+
+        h1:hover {
+            color: #55748e;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        .student {
+            color: #788695;
+
+            margin-bottom: 25px;
+
+            font-size: 15px;
+        }
+
+
+        .result {
+            background: #edf3f7;
+
+            color: #3f607c;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            border: 1px solid #dce7ef;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            margin-bottom: 25px;
+
+            box-shadow: 0 5px 15px rgba(63, 96, 124, 0.07);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .result:hover {
+            background: #e6eef4;
+
+            transform: scale(1.02);
+
+            box-shadow: 0 8px 18px rgba(63, 96, 124, 0.11);
+        }
+
+
+        .details {
+            text-align: left;
+
+            background: #f8fafc;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            border: 1px solid #e4ebf1;
+
+            line-height: 2;
+
+            color: #526579;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .details:hover {
+            background: #f5f8fb;
+
+            border-color: #d5e0e9;
+        }
+
+
+        .details p {
+            border-bottom: 1px solid #e8edf2;
+
+            padding: 3px 0;
+        }
+
+
+        .details p:last-child {
+            border-bottom: none;
+        }
+
+
+        .details b {
+            color: #3f607c;
+        }
+
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 12px 25px;
+
+            text-decoration: none;
+
+            background: #6d8ba4;
+
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            box-shadow: 0 5px 12px rgba(63, 96, 124, 0.15);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .btn:hover {
+            background: #55748e;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 18px rgba(63, 96, 124, 0.22);
+        }
+
+
+        .btn:active {
+            transform: translateY(0);
+
+            box-shadow: 0 3px 8px rgba(63, 96, 124, 0.15);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <div class="result-box">
+
+            <h1>
+                Placement Result
+            </h1>
+
+
+            <p class="student">
+                Student: {{ student_name }}
+            </p>
+
+
+            <div class="result">
+
+                {{ result }}
+
+            </div>
+
+
+            <div class="details">
+
+                <p>
+                    <b>CGPA:</b> {{ cgpa }}
+                </p>
+
+                <p>
+                    <b>IQ:</b> {{ iq }}
+                </p>
+
+                <p>
+                    <b>Profile Score:</b> {{ profile_score }}
+                </p>
+
+            </div>
+
+
+            <a
+                href="{% url 'prediction' %}"
+                class="btn"
+            >
+                Try Again
+            </a>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

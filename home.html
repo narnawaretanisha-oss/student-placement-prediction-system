@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Placement Portal</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background: linear-gradient(135deg, #f3f6fa, #e9f0f6);
+            color: #293b4f;
+        }
+
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            padding: 22px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(63, 96, 124, 0.10);
+            border-bottom: 1px solid #e3eaf0;
+        }
+
+
+        .navbar h2 {
+            color: #3f607c;
+            letter-spacing: 0.5px;
+            transition: 0.3s ease;
+        }
+
+
+        .navbar h2:hover {
+            color: #55748e;
+            letter-spacing: 1px;
+        }
+
+
+        .main {
+            min-height: 88vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .box {
+            width: 430px;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            padding: 45px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            border: 1px solid #e5edf3;
+
+            box-shadow: 0 12px 35px rgba(63, 96, 124, 0.12);
+
+            transition: 0.35s ease;
+        }
+
+
+        .box:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 18px 40px rgba(63, 96, 124, 0.16);
+        }
+
+
+        .box h1 {
+            color: #3f607c;
+
+            margin-bottom: 12px;
+
+            font-size: 32px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .box h1:hover {
+            color: #55748e;
+        }
+
+
+        .box p {
+            color: #788695;
+
+            margin-bottom: 30px;
+
+            line-height: 1.5;
+        }
+
+
+        .btn {
+            display: block;
+
+            text-decoration: none;
+
+            background: #6d8ba4;
+
+            color: white;
+
+            padding: 14px;
+
+            margin: 14px 0;
+
+            border-radius: 9px;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.3px;
+
+            box-shadow: 0 5px 12px rgba(63, 96, 124, 0.15);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .btn:hover {
+            background: #55748e;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 18px rgba(63, 96, 124, 0.22);
+        }
+
+
+        .btn:active {
+            transform: translateY(0);
+
+            box-shadow: 0 3px 8px rgba(63, 96, 124, 0.15);
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="navbar">
+
+        <h2>Student Placement Portal</h2>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="box">
+
+            <h1>Welcome</h1>
+
+            <p>
+                Student Placement Prediction System
+            </p>
+
+
+            <a href="{% url 'login' %}" class="btn">
+                Login
+            </a>
+
+
+            <a href="{% url 'registration' %}" class="btn">
+                Registration
+            </a>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
